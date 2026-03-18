@@ -1,0 +1,31 @@
+{
+  "name": "uuu.ctrl",
+  "displayname": "",
+  "version": "1.0.0",
+  "author": "Alexander Wu",
+  "authors": [],
+  "description": "Tools for working with control sources, such as MIDI controllers, computer keyboard, and more.",
+  "tags": [""],
+  "website": "https://aleksuuu.github.io",
+  "extends": "",
+  "extensible": 0,
+  "max_version_min": "9.0.0",
+  "max_version_max": "none",
+  "os": {
+    "macintosh": {
+      "min_version": "10.11.x",
+      "platform": ["aarch64", "x64"]
+    },
+    "windows": {
+      "min_version": "8",
+      "platform": ["x64"]
+    }
+  },
+  "homepatcher": "",
+  "package_extra": {
+    "copyright": ""
+  },
+  "filelist": {},
+  "c74install": 1,
+  "installdate": 3797865493
+}
