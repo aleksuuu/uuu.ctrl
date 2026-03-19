@@ -26,7 +26,7 @@
                     "numinlets": 1,
                     "numoutlets": 0,
                     "offset": [ 0.0, 0.0 ],
-                    "patching_rect": [ -0.8196721076965332, 0.8196721076965332, 252.45900917053223, 463.11474084854126 ],
+                    "patching_rect": [ -1.0, 1.0, 252.0, 494.0 ],
                     "varname": "uuu.ctrl.map",
                     "viewvisibility": 1
                 }

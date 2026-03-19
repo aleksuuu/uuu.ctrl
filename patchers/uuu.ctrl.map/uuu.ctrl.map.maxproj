@@ -2,7 +2,7 @@
     "name": "uuu.ctrl.map",
     "version": 1,
     "creationdate": 3856637173,
-    "modificationdate": 3856639185,
+    "modificationdate": 3856720935,
     "viewrect": [ 25.0, 119.0, 300.0, 500.0 ],
     "autoorganize": 1,
     "hideprojectwindow": 0,
@@ -17,7 +17,12 @@
             }
         },
         "code": {        },
-        "data": {        },
+        "data": {
+            "dummy.txt": {
+                "kind": "textfile",
+                "local": 1
+            }
+        },
         "externals": {        }
     },
     "layout": {    },
