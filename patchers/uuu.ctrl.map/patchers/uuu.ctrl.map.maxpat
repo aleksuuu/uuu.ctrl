@@ -9,11 +9,33 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ -166.0, -985.0, 1221.0, 951.0 ],
+        "rect": [ -166.0, -985.0, 1156.0, 951.0 ],
         "openrect": [ 0.0, 0.0, 252.28881361279605, 461.73586083572536 ],
         "openrectmode": 0,
         "openinpresentation": 1,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-179",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 21.142857909202576, 104.92957884073257, 56.0, 22.0 ],
+                    "text": "r #0-hold"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-178",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 20.143885612487793, 134.53237891197205, 72.0, 22.0 ],
+                    "text": "prepend set"
+                }
+            },
             {
                 "box": {
                     "id": "obj-166",
@@ -400,7 +422,7 @@
                     "numinlets": 1,
                     "numoutlets": 3,
                     "outlettype": [ "", "bang", "int" ],
-                    "patching_rect": [ -92.0, 1180.0, 86.0, 22.0 ],
+                    "patching_rect": [ -113.94252681732178, 1202.0, 86.0, 22.0 ],
                     "text": "text dummy.txt"
                 }
             },
@@ -704,7 +726,7 @@
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
                             "parameter_linknames": 1,
-                            "parameter_longname": "hold[1]",
+                            "parameter_longname": "hold",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "hold",
@@ -1396,7 +1418,7 @@
             },
             {
                 "box": {
-                    "code": "/fb, 0.;\r/freeloop%5B1%5D, 0.;\r/ctrl, 0.;\r/mix, 0.;\r/wavetype%5B1%5D, 0.;\r/octomode, 0.;\r/dampen, 0.25;\r/frequency, 0.;\r/feedback, 0.99;\r/shape, 0.;\r/moddepth, 0.;\r/frequency%5B1%5D, 0.209914;\r/modratio, 0.250405;\r/binauralchanoffset, 0.;\r/xf, 1.;\r/durscale%5B1%5D, 0.;\r/minclicklen, 0.095313;\r/maxclicklen, 0.133906;\r/minclickpulsewidth, 0.;\r/maxclickpulsewidth, 0.076171;\r/mute, 0.;\r/numzerocrossings, 0.;\r/ramptime%5B1%5D, 0.2;\r/numrepeats, 0.;\r/ext, 0.;\r/on, 0.;\r/newwavesettriggersrepeat, 0.;\r/numzerocrossingsinput, 0.;\r/octochanoffset, 0.;\r/sustain%5B1%5D, 0.;\r/enableks, 0.;\r/wavetype, 0.;\r/pitchshift, 0.5;\r/vcoext, 1.;\r",
+                    "code": "",
                     "fontface": 0,
                     "fontname": "<Monospaced>",
                     "fontsize": 12.0,
@@ -1407,7 +1429,7 @@
                     "outlettype": [ "", "", "", "" ],
                     "patching_rect": [ 894.5652003288269, 336.0, 340.0, 200.0 ],
                     "saved_object_attributes": {
-                        "name": "1068-currentvalues",
+                        "name": "#0-currentvalues",
                         "precision": 6
                     }
                 }
@@ -2432,7 +2454,7 @@
                     "presentation": 1,
                     "presentation_rect": [ -24.0, 69.33333539962769, 275.0, 417.6666646003723 ],
                     "saved_object_attributes": {
-                        "name": "1068-held_osc",
+                        "name": "#0-held_osc",
                         "precision": 6
                     },
                     "textcolor": [ 0.85, 0.85, 0.85, 1.0 ],
@@ -4667,7 +4689,7 @@
                 "box": {
                     "comment": "@dict @device @edit @sync @hold",
                     "id": "obj-8",
-                    "index": 1,
+                    "index": 0,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -5073,7 +5095,6 @@
                     "patching_rect": [ 321.0, 995.0, 143.0, 23.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 71.05263411998749, 234.7368505001068, 112.66667002439499, 23.333334028720856 ],
-                    "text": "vcoext",
                     "textjustification": 1
                 }
             },
@@ -5795,6 +5816,18 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-127", 0 ],
+                    "source": [ "obj-178", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-178", 0 ],
+                    "source": [ "obj-179", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-188", 0 ],
                     "source": [ "obj-183", 0 ]
                 }
@@ -6381,6 +6414,31 @@
                     "source": [ "obj-99", 0 ]
                 }
             }
-        ]
+        ],
+        "parameters": {
+            "obj-104": [ "createjson", "createjson", 0 ],
+            "obj-114": [ "seljson", "seljson", 0 ],
+            "obj-127": [ "hold", "hold", 0 ],
+            "obj-143": [ "heldmap", "heldmap", 0 ],
+            "obj-169": [ "syncmap", "syncmap", 0 ],
+            "obj-189": [ "editmap", "editmap", 0 ],
+            "obj-193": [ "initmap", "initmap", 0 ],
+            "obj-37": [ "neverhold", "neverhold", 0 ],
+            "obj-46": [ "confirmmap", "confirmmap", 0 ],
+            "obj-58": [ "mapsrc", "mapsrc", 0 ],
+            "obj-84": [ "usejson", "createjson", 0 ],
+            "obj-85": [ "flip", "sendbang", 0 ],
+            "obj-97": [ "sendmidiout", "sendmidiout", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
+            "inherited_shortname": 1
+        },
+        "autosave": 0
     }
 }
