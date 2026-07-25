@@ -9,7 +9,7 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ -166.0, -985.0, 1803.0, 951.0 ],
+        "rect": [ 34.0, 100.0, 1377.0, 801.0 ],
         "openrect": [ 0.0, 0.0, 252.28881361279605, 461.73586083572536 ],
         "openrectmode": 0,
         "openinpresentation": 1,
@@ -103,6 +103,7 @@
             {
                 "box": {
                     "annotation": "if enabled, osc values will always be sent back out to midi controllers as CC or note messages",
+                    "hidden": 1,
                     "id": "obj-97",
                     "maxclass": "live.text",
                     "numinlets": 1,
@@ -523,6 +524,7 @@
                 "box": {
                     "bgcolor": [ 0.079348079365577, 0.07934804057877, 0.079348050547289, 1.0 ],
                     "bubble_outlinecolor": [ 0.85, 0.85, 0.85, 0.0 ],
+                    "hidden": 1,
                     "id": "obj-147",
                     "maxclass": "live.comment",
                     "numinlets": 1,
@@ -698,7 +700,7 @@
                     "fontname": "Ableton Sans Medium",
                     "fontsize": 9.5,
                     "id": "obj-126",
-                    "items": [ "Midi Fighter Twister", ",", "to Max 1", ",", "to Max 2" ],
+                    "items": [ "IAC Driver Bus 1", ",", "to Max 1", ",", "to Max 2", ",", "Midi Fighter Twister" ],
                     "maxclass": "umenu",
                     "numinlets": 1,
                     "numoutlets": 3,
@@ -726,7 +728,7 @@
                         "valueof": {
                             "parameter_enum": [ "val1", "val2" ],
                             "parameter_linknames": 1,
-                            "parameter_longname": "hold",
+                            "parameter_longname": "hold[1]",
                             "parameter_mmax": 1,
                             "parameter_modmode": 0,
                             "parameter_shortname": "hold",
@@ -1418,7 +1420,7 @@
             },
             {
                 "box": {
-                    "code": "",
+                    "code": "/balance, 0.5;\r/moddepth, 0.;\r/ext, 0.;\r/fb, 0.543307;\r/wtx, 0.;\r/numzerocrossings, 0.;\r/maxclickpulsewidth, 0.076171;\r/wty, 0.;\r/mix, 0.866142;\r/numzerocrossingsinput, 0.;\r/minclicklen, 0.095313;\r/wavetype%5B1%5D, 0.875;\r/frequency%5B1%5D, 0.209914;\r/newwavesettriggersrepeat, 0.;\r/hold, 0.;\r/on, 0.;\r/numrepeats, 0.;\r/enableks, 0.;\r/vcoext, 0.;\r/dampen, 0.25;\r/mute, 0.;\r/xf, 0.;\r/pnogain, 0.7;\r/frequency, 0.248387;\r/pno, 0.;\r/ctrl, 0.;\r/wavetype, 0.875;\r/modratio, 0.250405;\r/minclickpulsewidth, 0.;\r/spread, 0.;\r/pitchshift, 0.5;\r/maxclicklen, 0.133906;\r/feedback, 0.99;\r/on%5B1%5D, 0.;\r/fbon, 1.;\r",
                     "fontface": 0,
                     "fontname": "<Monospaced>",
                     "fontsize": 12.0,
@@ -1429,7 +1431,7 @@
                     "outlettype": [ "", "", "", "" ],
                     "patching_rect": [ 894.5652003288269, 336.0, 340.0, 200.0 ],
                     "saved_object_attributes": {
-                        "name": "#0-currentvalues",
+                        "name": "1003-currentvalues",
                         "precision": 6
                     }
                 }
@@ -2444,6 +2446,7 @@
                     "fontface": 0,
                     "fontname": "<Monospaced>",
                     "fontsize": 12.0,
+                    "hidden": 1,
                     "id": "obj-23",
                     "ignoreclick": 1,
                     "maxclass": "coll.codebox",
@@ -2454,7 +2457,7 @@
                     "presentation": 1,
                     "presentation_rect": [ -24.0, 69.33333539962769, 275.0, 417.6666646003723 ],
                     "saved_object_attributes": {
-                        "name": "#0-held_osc",
+                        "name": "1003-held_osc",
                         "precision": 6
                     },
                     "textcolor": [ 0.85, 0.85, 0.85, 1.0 ],
@@ -2625,7 +2628,6 @@
                         },
                         "classnamespace": "box",
                         "rect": [ 189.0, -982.0, 960.0, 913.0 ],
-                        "visible": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -4631,7 +4633,7 @@
                 "box": {
                     "comment": "@dict @device @edit @sync @hold",
                     "id": "obj-8",
-                    "index": 0,
+                    "index": 1,
                     "maxclass": "inlet",
                     "numinlets": 0,
                     "numoutlets": 1,
@@ -5037,6 +5039,7 @@
                     "patching_rect": [ 321.0, 995.0, 143.0, 23.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 71.05263411998749, 234.7368505001068, 112.66667002439499, 23.333334028720856 ],
+                    "text": "xf",
                     "textjustification": 1
                 }
             },
@@ -5084,6 +5087,7 @@
                     "patching_rect": [ 469.0, 995.0, 148.0, 23.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 71.05263411998749, 276.8421151638031, 112.66667002439499, 23.333334028720856 ],
+                    "text": "cc62ch2",
                     "textjustification": 1
                 }
             },
@@ -6356,31 +6360,6 @@
                     "source": [ "obj-99", 0 ]
                 }
             }
-        ],
-        "parameters": {
-            "obj-104": [ "createjson", "createjson", 0 ],
-            "obj-114": [ "seljson", "seljson", 0 ],
-            "obj-127": [ "hold", "hold", 0 ],
-            "obj-143": [ "heldmap", "heldmap", 0 ],
-            "obj-169": [ "syncmap", "syncmap", 0 ],
-            "obj-189": [ "editmap", "editmap", 0 ],
-            "obj-193": [ "initmap", "initmap", 0 ],
-            "obj-37": [ "neverhold", "neverhold", 0 ],
-            "obj-46": [ "confirmmap", "confirmmap", 0 ],
-            "obj-58": [ "mapsrc", "mapsrc", 0 ],
-            "obj-84": [ "usejson", "createjson", 0 ],
-            "obj-85": [ "flip", "sendbang", 0 ],
-            "obj-97": [ "sendmidiout", "sendmidiout", 0 ],
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
-            "inherited_shortname": 1
-        },
-        "autosave": 0
+        ]
     }
 }

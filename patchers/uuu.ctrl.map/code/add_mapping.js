@@ -1,4 +1,4 @@
-let mapping;
+let dict_name;
 
 function set(
   param_name,
@@ -8,10 +8,13 @@ function set(
   flip = 0,
   ignore_values = "",
 ) {
-  if (!mapping) {
+  if (!dict_name) {
     error("No mapping dict found.\n");
     return;
   }
+  let mapping = new Dict(dict_name);
+  mapping = JSON.parse(mapping.stringify()); // stringify() here is a Max specific syntax
+
   if (mapping[param_name]) {
     let oldSrc = mapping[param_name].src;
     if (!oldSrc.includes(src)) {
@@ -62,7 +65,6 @@ function set(
   );
 }
 
-function dictionary(dict_name) {
-  mapping = new Dict(dict_name);
-  mapping = JSON.parse(mapping.stringify()); // stringify() here is a Max specific syntax
+function dictionary(name) {
+  dict_name = name;
 }
